@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head lang="eng">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vamo Contar</title>
+
+        <style>
+            *{
+                margin: 0;
+                box-sizing: border-box;
+            }
+            
+            body{
+                
+                background:url("parede-de-tijolo-azul-27695917.jpg") ;
+                display: grid;
+                place-items: center;
+                height: 100vh;
+
+            }
+            div{
+                text-align: center;
+                background-color: #add8e640;
+                padding: 30px;
+                border-radius: 50px;
+                border: solid black 1px;
+
+
+            }
+
+            h1{
+                color: rgb(21, 77, 126);
+
+            }
+
+            p{
+                color: rgb(0, 0, 0);
+                font-size: 80px;
+                font-family: monospace;
+                border-color: blue;
+            }
+
+            button{
+                background-color: rgb(75, 134, 211);
+                border-radius: 50px;
+                
+
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <h1>CONTADOR</h1>
+            <p id="number">0</p>
+            <button onclick="diminuir()">Menos</button>
+            <button onclick="volta()">Zerar</button>
+            <button onclick="somar()">Mais</button>
+        </div>
+        <script>
+
+            const p = document.getElementById("number")
+            function diminuir(){
+                let num = parseInt(p.innerText)
+                num = num - 1
+                p.innerText = num
+            }
+            function somar(){
+                let num = parseInt(p.innerText)
+                num = num + 1
+                p.innerText = num
+            }
+            function volta(){
+                let num = parseInt(p.innerText)
+                num = 0
+                p.innerText = num
+            }
+            
+        </script>
+    </body>
+</html>
